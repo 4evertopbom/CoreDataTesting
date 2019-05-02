@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18D109" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="People" representedClassName=".People" syncable="YES">
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <relationship name="pet" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Pet" inverseName="owner" inverseEntity="Pet" syncable="YES"/>
+    </entity>
+    <entity name="Pet" representedClassName=".Pet" syncable="YES">
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="type" attributeType="String" syncable="YES"/>
+        <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="People" inverseName="pet" inverseEntity="People" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="People" positionX="-294.359375" positionY="-168.26953125" width="128" height="73"/>
+        <element name="Pet" positionX="113.0390625" positionY="-175.80078125" width="128" height="88"/>
+    </elements>
+</model>
